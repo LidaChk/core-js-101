@@ -17,4 +17,5 @@ module.exports = {
   },
   rules: {
   },
+  ignorePatterns: [ "**/test/*.js"],
 };
