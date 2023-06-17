@@ -83,7 +83,7 @@ function getPolynom(...args) {
  */
 function memoize(func) {
   const cache = new Map();
-  return function itisDecorator(x) {
+  return (x) => {
     if (cache.has(x)) {
       return cache.get(x);
     }
