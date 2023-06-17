@@ -84,10 +84,7 @@ function getPolynom(...args) {
 function memoize(func) {
   const cache = new Map();
   return (x) => {
-    if (cache.has(x)) {
-      return cache.get(x);
-    }
-    const result = func.call(this, x);
+    const result = cache.has(x) ? cache.get(x) : func.call(this, x);
     cache.set(x, result);
     return result;
   };
